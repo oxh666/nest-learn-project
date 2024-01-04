@@ -1,11 +1,13 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { OxhModule } from './oxh/oxh.module';
+import { Module } from "@nestjs/common";
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
+import { FirstController } from "./first/first.controller";
+import { FirstService } from "./first/first.service";
 
 @Module({
-  imports: [OxhModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [],
+  controllers: [ AppController, FirstController ],
+  providers: [ AppService, FirstService ]
 })
-export class AppModule {}
+export class AppModule {
+}
